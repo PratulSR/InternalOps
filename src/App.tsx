@@ -105,23 +105,32 @@ const Logo = styled.img`
 
 function App() {
   return (
-    <Page>
-      <Text>Me and my (new) Love</Text>
-      <Image src={require('./Distracted_Sigma.jpg')} alt="Distracted Sigma looking at React" title="Python had my heart, not anymore😤" />
-      {/* <Button 
-        border="black"
-        color="light blue"
-        height = "40px"
-        onClick={() => window.open(`https://www.youtube.com/watch?v=dQw4w9WgXcQ`, '_blank', 'noreferrer')}
-        radius = "10%"
-        width = "300px"
-        children = "Click here for a surprise👀"
-        cursor='pointer'
-      /> */}
-      <Button as="a" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here for a surprise👀</Button>
-      
-      {/* <button><img src={require('./gdsc-logo.png')} alt="gdsc logo" onClick={() => window.open(`https://www.youtube.com/watch?v=dQw4w9WgXcQ`, '_blank', 'noreferrer')} /></button> */}
-    </Page>
+    <div className="App">
+      <Header>
+				<Link to="/"><Logo src={gdsc} /></Link>				
+				{/* <Menu open={open} />
+				<Burger open={open} setOpen={setOpen} />			 */}
+			</Header>
+      <Routes>
+        <Page>
+          <Text>Me and my (new) Love</Text>
+          <Image src={require('./Distracted_Sigma.jpg')} alt="Distracted Sigma looking at React" title="Python had my heart, not anymore😤" />
+          {/* <Button 
+            border="black"
+            color="light blue"
+            height = "40px"
+            onClick={() => window.open(`https://www.youtube.com/watch?v=dQw4w9WgXcQ`, '_blank', 'noreferrer')}
+            radius = "10%"
+            width = "300px"
+            children = "Click here for a surprise👀"
+            cursor='pointer'
+          /> */}
+          <Button as="a" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here for a surprise👀</Button>
+          
+          {/* <button><img src={require('./gdsc-logo.png')} alt="gdsc logo" onClick={() => window.open(`https://www.youtube.com/watch?v=dQw4w9WgXcQ`, '_blank', 'noreferrer')} /></button> */}
+        </Page>
+      </Routes>
+    </div>
   );
 }
 
